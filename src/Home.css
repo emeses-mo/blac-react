@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+.logo img{
+    width: 9vw;
+}
+.home_header{
+    display: flex;
+    background-color: #326E6E;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+.nav{
+    display: flex;
+   font-family: 'Roboto';
+   font-weight: 200;
+   font-size: 15px;
+    flex: 0.5   ;
+    justify-content: space-between;
+}
+.cartprf{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    flex: 0.1;
+}
+.cartprf img{
+    width: 30px;
+}
+
+  .body{
+      display: flex;
+      background-color: #326E6E;
+      height: 100vh;
+      font-family: 'Roboto',sans-serif;
+      font-size:24px;
+
+  }  
+  .logout:hover{
+      cursor:pointer;
+  }
+  .spcl{
+      color: white;
+      font-size: larger;
+  }
+  .cta{
+      flex: 0.5;
+     
+      text-align: center;
+      margin: auto;
+  }
+  .cta_img{
+      flex: 0.5;
+      text-align: center    ;
+      object-fit: contain;
+      align-items: center;
+      margin-top: 1%;
+     
+      
+  }
+  .cta_img img{
+      width: 30vw;
+      border-radius: 12px;
+  }
+  .cta button{
+      color: white;
+      padding: 2% 4%;
+      border: none;
+      background-color: black;
+      font-family: 'Roboto',sans-serif;
+      font-size: 20px;
+  }
+  .cta button:hover{
+      cursor: pointer;
+  }
+   

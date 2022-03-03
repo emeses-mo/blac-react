@@ -1,0 +1,33 @@
+
+.ci_img img{
+    width: 10vw;
+}
+.ci_card{
+    display: flex;
+    width: 40%;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    background-color: #326E6E;
+    font-family: 'Robot',sans-serif;
+    margin: 1%;
+}
+.ci_info{
+ 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2%;
+}
+.ci_remove img{
+    width: 32px;
+    
+}
+.ci_remove{
+    display: flex;
+    align-items: center;
+    padding: 1%;
+}
+.ci_remove:hover{
+    background-color: red;
+    cursor: pointer;
+}

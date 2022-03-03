@@ -1,0 +1,31 @@
+.pimage img{
+    width: 14vw;
+    border-radius: 8px;
+  
+}
+.product_main{
+    background-color: #abd1c6;
+    padding: 1%;
+    border-radius: 8px;
+    margin-top: 1%;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+}
+.pinfo{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.addtocart button{
+    width: 100%;
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    padding: 2%;
+}
+.addtocart button:hover{
+    color: white;
+    cursor: pointer;
+    background-color: #326E6E;
+}

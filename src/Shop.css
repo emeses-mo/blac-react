@@ -1,0 +1,11 @@
+.products_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 2%;
+   margin: 0 2%;
+   
+}
+.shop h1{
+    padding-left    : 4%;
+}
