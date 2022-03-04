@@ -1,0 +1,42 @@
+body{
+    background-color: white;
+}
+.header_ham img{
+    width: 30px;
+}
+.header_new{
+    display: flex;
+    padding: 1%;
+    align-items: center;
+}
+.header_ham{
+    flex:0.1;
+}
+.header_nav{
+    display: flex;
+    flex: 0.6;
+    justify-content: space-evenly;
+}
+.header_search{
+    display: flex;
+    align-items: center;
+    flex: 0.2;
+
+}
+.header_search input{
+    padding: 1%;
+    
+}
+.header_search img{
+    border: 1px solid black;
+  
+    padding: 1.25%;
+}
+.header_cart{
+    flex: 0.1;
+  
+}
+.header_cart img{
+    width: 30px;
+}
+

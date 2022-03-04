@@ -1,0 +1,27 @@
+.trending_wrapper{
+    width: 100%;
+    display: flex;
+    background-color: #C8CBD5;
+    height: 30vh;
+
+}
+.trending_main{
+    margin: 0 2%;
+}
+.trending_img img{
+    width: 15vw;
+}
+.trending_title{
+    font-size: 10px;
+}
+.trending_card{
+    display: flex;
+    background-color: white;
+    max-width: 40%;
+    height: max-content;
+    margin: 1%;
+    padding: 1%;
+}
+.trending_info{
+    
+}

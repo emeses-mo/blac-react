@@ -1,0 +1,16 @@
+.brand img{
+    width: 140px;
+}
+.brands_wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px dotted black;
+    width: 80%;
+    align-items: center;
+}
+.brands_main{
+  margin-top: 2%;
+ display: flex;
+justify-content: center;
+
+}

@@ -1,0 +1,16 @@
+.sections_wrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+.section_img img{
+    width: 200px;
+}
+.sectionCard{
+    text-align: center;
+}
+.section_title{
+    font-size: 12px;
+}
+.sections_main{
+    margin-top: 2%;
+}

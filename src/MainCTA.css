@@ -1,0 +1,27 @@
+ .cta_main{
+    background: #8360c3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 38.5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+ }
+ .cta_text{
+     flex: 0.5;
+     text-align: center;
+     font-size: 25px;
+ }
+ .cta_text button{
+     padding: 2% 4%;
+     border: none;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        background-color: #8693BD;
+        border-radius: 24px;
+ }
+ .cta_model{
+     flex: 0.5;
+     
+ }
