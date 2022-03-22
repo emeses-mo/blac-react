@@ -15,6 +15,8 @@ import MainCTA from './MainCTA';
 import Trending from './Trending';
 import Brands from './Brands';
 import Sections from './Sections';
+import Admin from './Admin';
+import Men from './Men';
 function App() {
   const [{},dispatch] = useStateValue();
   useEffect(() => {
@@ -40,6 +42,12 @@ function App() {
     <Router>
     <div className="app">
       <Switch>
+        <Route path='/men'>
+          <Men />
+        </Route>
+        <Route path='/admin'>
+          <Admin />
+        </Route>
       <Route path="/test">
       <Header_new />
       <MainCTA />
@@ -62,8 +70,11 @@ function App() {
            <Shop />
           </Route>
           <Route path="/">
-            <Header />
-            <Home />
+          <Header_new />
+      <MainCTA />
+      <Trending />
+      <Brands />
+      <Sections />
           </Route>
       </Switch>
       

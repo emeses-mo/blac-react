@@ -1,6 +1,7 @@
 import React from 'react'
 import ham from './images/menu.png'
 import './Header_new.css'
+import {Link} from 'react-router-dom'
 import cart from './images/sc.png'
 import search from './images/search.png'
 function Header_new() {
@@ -11,7 +12,7 @@ function Header_new() {
         </div>
         <div className="header_nav">
             <p>HOME</p>
-            <p>MEN</p>
+          <Link to='/men'><p>MEN</p></Link>  
             <p>WOMEN</p>
             <p>KIDS</p>
             <p>SHOES</p>

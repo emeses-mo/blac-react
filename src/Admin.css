@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+.admin_main{
+  
+    height: 100vh;
+    background-color: #eff1f4;
+    display: flex;
+}
+.admin_nav{
+    flex: 0.15  ;
+    background-color: black;
+    color: white;
+    padding: 2% 2% 0 2%;
+}
+.admin_form{
+    
+    height: 100%;
+    flex: 0.8;
+
+    
+}
+.form{
+    padding: 4%;
+    
+    width: 22vw;
+}
+.form input{
+    width: 100%;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    padding: 2%;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 540;
+    margin:2% 0;
+}
+.form select{
+    width: 50%;
+    outline: none;
+    padding: 1.5%;
+    margin:2% 0;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 540;
+
+}
+.form  button{
+    width: 60%;
+    padding: 2%;
+    border: none;
+    border-radius: 22px;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 540;
+    font-size: 15px;
+}   
+.form  button:hover{
+    cursor: pointer;
+}
+.product_button{
+    text-align: center;
+    margin-top: 4% ;
+}
+.nav_items{
+    
+    padding: 0.5%;
+    margin: 1%;
+   
+    font-size: 14px;
+    text-align: center;
+}
+.nav_items h2:hover{
+    cursor: pointer;
+    color: #eff1f4;
+}
+label{
+    font-size: 18px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 550;
+    margin: 3% 0;
+}
