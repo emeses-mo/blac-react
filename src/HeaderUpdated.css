@@ -1,0 +1,32 @@
+.hu_main{
+    display: flex;
+    text-align: center;
+    align-items:center;
+    padding: 1% 0;
+    height: 5vh;
+}
+.hu_logo{
+    flex: 0.2   ;
+}
+.hu_nav{
+    flex: 0.6;
+    display: flex;
+    justify-content: space-evenly;
+    width: 10vw;
+ 
+}
+.hunav_items{
+    display: flex;
+    justify-content: space-around;
+    width: 20vw;
+}
+.hu_search-cart{
+    flex: 0.2;
+    display: flex;
+    justify-content: space-between;
+    padding-right:2%;
+    align-items: center;
+}
+.hu_cart img{
+    width: 30px;
+}

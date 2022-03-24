@@ -1,0 +1,26 @@
+.contentbar{
+    flex: 0.2;
+    padding: 1%;
+}
+.shop_items{
+    flex:0.8;
+    padding: 1%;
+}
+.men_main{
+    display: flex;
+    height: 80vh;
+}
+.contentbar_items{
+    color: gray;
+    font-weight: 300;
+}
+.contentbar_items h4:hover{
+    cursor: pointer;
+    color: black;
+}
+.shop_items{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: 100%;
+}

@@ -17,6 +17,7 @@ import Brands from './Brands';
 import Sections from './Sections';
 import Admin from './Admin';
 import Men from './Men';
+import HeaderUpdated from './HeaderUpdated';
 function App() {
   const [{},dispatch] = useStateValue();
   useEffect(() => {
@@ -43,6 +44,7 @@ function App() {
     <div className="app">
       <Switch>
         <Route path='/men'>
+          <HeaderUpdated />
           <Men />
         </Route>
         <Route path='/admin'>
