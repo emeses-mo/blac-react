@@ -1,0 +1,99 @@
+.detailed_main{
+    display: flex;
+    height: 90vh;
+}
+.preview_images{
+    flex: 0.7;
+    display: flex;
+    
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+.preview_images img{
+    width: 30vw;
+  
+}
+
+
+.product_details{
+    flex:0.3;
+    padding: 2%;
+    
+}
+.ptitle{
+    margin-top: 15%;
+}
+.ptitle p{
+    font-size: 25px;
+    font-weight: 600;
+   
+}
+.primary_details p{
+    margin: 0;
+}
+.secondary_details{
+    margin-top:2% ;
+}
+.secondary_details p{
+    margin: 0;
+}
+.sd_price p{
+    color: black;
+    font-weight: 500;
+}
+.incl p{
+    color: gray;
+}
+.select_size{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.select_size button{
+    width: 50px;
+    height: 35px;
+    background-color: white;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    padding: 2%;
+    font-size: 17px;
+    font-family: 'Roboto',sans-serif;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+.select_size button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    top: -8px;
+}
+.select_size_cntr p{
+font-weight: 500;
+}
+
+.add_product button{
+    width: 60%;
+    padding: 2%;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+.add_product button:hover{
+    cursor: pointer;
+    top: -8px;
+}
+.add_product{
+    margin-top:5%;
+}
+.product_desc{
+    margin-top: 5%;
+}

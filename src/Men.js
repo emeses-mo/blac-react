@@ -37,7 +37,7 @@ function Men() {
             </div>
             <div className="shop_items">
                 {
-                    products.map((prod)=>(
+                    products.map((prod)=>(  
                         <ProductCardNew name={prod.ProductName} price={products.Price} image={products.url} />
                     ))
                 }

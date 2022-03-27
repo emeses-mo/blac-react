@@ -14,7 +14,7 @@ e.preventDefault()
 
 const uploadTask= storage.ref(`adminProducts/${section}/${image.name}`).put(image)
 uploadTask.on("state_changed",
-  snapshot =>{},
+  snapshot =>{},  
   error =>{
     console.log("e>",error)
   },
