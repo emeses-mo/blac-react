@@ -1,5 +1,6 @@
 import React ,{useState} from 'react'
 import './Admin.css'
+import { v4 as uuidv4 } from "uuid";
 import { Link ,useHistory} from 'react-router-dom'
 import { storage,db,auth } from './Firebase';
 function Admin() {
@@ -9,10 +10,12 @@ function Admin() {
     const [section,setSection]= useState('')
     const [price,setPrice]= useState('')
     const [url,setUrl]=useState('')
+    const [desc,setDesc]= useState('')
+
     const handleUpload =(e)=>{
 e.preventDefault()
 
-const uploadTask= storage.ref(`adminProducts/${section}/${image.name}`).put(image)
+const uploadTask= storage.ref(`adminProducts/${image.name}`).put(image)
 uploadTask.on("state_changed",
   snapshot =>{},  
   error =>{
@@ -23,13 +26,14 @@ uploadTask.on("state_changed",
       setUrl(url)
      
       auth.onAuthStateChanged((authUser)=>{
-
-       db.collection(section).doc().set({
-         
+        const pid= uuidv4()
+       db.collection(section).doc(pid).set({
+         ProductID:pid,
          ProductName:product,
          Price:price,
          url:url,
          Section:section,
+         desc:desc,
         
        })
        console.log("auth ",authUser)
@@ -97,6 +101,7 @@ console.log("url",url)
 <label htmlFor="">Image</label>
 <input type="file" accept="image/png, image/jpeg"   onChange={handleImage} />
 <br />
+<textarea maxLength='250' name="" id="" cols="30" rows="10" value={desc} onChange={e=>setDesc(e.target.value)}></textarea>
 <div className="product_button">
   <button onClick={handleUpload}>
     

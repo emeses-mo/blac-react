@@ -1,33 +1,106 @@
 
 .ci_img img{
     width: 10vw;
+    border-radius: 12px;
+}
+.ci_delete img{
+    width: 22px;
+}
+.ci_delete img:hover{
+    cursor: pointer;
+
 }
 .ci_card{
     display: flex;
-    width: 40%;
-    background-color: antiquewhite;
-    justify-content: space-between;
-    background-color: #326E6E;
-    font-family: 'Robot',sans-serif;
-    margin: 1%;
+  border-top: 1px solid #D0CFCF;
+  border-bottom: 1px solid #D0CFCF;
+  padding: 1%;
+    width: 70%;
+
+}
+.ci_blocks{
+    display: block;
+  
+    width: 100%;
+    padding: 3%;
 }
 .ci_info{
- 
     display: flex;
+   
     width: 100%;
-    justify-content: space-between;
-    padding: 2%;
+    justify-content: space-between; 
 }
-.ci_remove img{
-    width: 32px;
-    
-}
-.ci_remove{
+.ci_extras{
     display: flex;
     align-items: center;
-    padding: 1%;
+    justify-content: space-between;
 }
-.ci_remove:hover{
-    background-color: red;
+.ci_size p{
+   font-weight: 550;
+    
+}
+.ci_info p{
+    font-size: 18px;
+  
+    font-weight: 500;
+}
+.ci_price p{
+    color: black;
+}
+.ci_size{
+   
+}
+.cartItem_main{
+    
+}
+.checkout_block{
+    
+    width: 30%;
+}
+.subtotal{
+    padding: 2%;
+    border-radius: 12px;
+    box-shadow: -5px 3px 22px -11px rgba(0,0,0,0.75);
+
+}
+.subtotal h3{
+    margin: 0;
+    margin-bottom: 1%;
+    font-size: 17px;
+}
+.subtotal p{
+    padding-left: 2%;
+    font-size: 22px;
+    margin: 0;
+}
+.proceedTC{
+    text-align: center;
+    margin-top: 4%;
+}
+.proceedTC button{
+    width: 50%;
+    padding: 2%;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 22px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+.proceedTC button:hover{
     cursor: pointer;
+    top: -8px;
+}
+.cart_main{
+    display: flex;
+    justify-content:  space-between;
+    padding: 2%;
+}
+.cart-items{
+    flex: 0.8;
+   
+    padding: 2%;
 }

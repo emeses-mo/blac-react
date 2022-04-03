@@ -2,8 +2,12 @@ import React ,{useState,useEffect} from 'react'
 import { db } from './Firebase';
 import Product from './Product'
 import './Men.css'
+import {Link} from 'react-router-dom'
 import ProductCardNew from './ProductCardNew';
 function Men() {
+    const setPid =(pid)=>{
+        localStorage.setItem("pid",JSON.stringify(pid))
+    }
     const [products,setProducts]= useState([])
     useEffect(()=>{
         db.collection('Mens').onSnapshot((querySnapshot)=>{
@@ -38,16 +42,12 @@ function Men() {
             <div className="shop_items">
                 {
                     products.map((prod)=>(  
-                        <ProductCardNew name={prod.ProductName} price={products.Price} image={products.url} />
+                        <Link to='/product-details' onClick={()=>setPid(prod.ProductID)}>                        <ProductCardNew name={prod.ProductName} price={prod.Price} image={products.url} /></Link>
+
                     ))
                 }
                 
-                <ProductCardNew />
-                <ProductCardNew />
-                <ProductCardNew />
-                <ProductCardNew />
-                <ProductCardNew />
-                <ProductCardNew />
+               
 
             </div>
     </div>

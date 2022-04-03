@@ -15,6 +15,7 @@
     width: 10vw;
  
 }
+
 .hunav_items{
     display: flex;
     justify-content: space-around;
@@ -29,4 +30,9 @@
 }
 .hu_cart img{
     width: 30px;
+    height: 30px;
+}
+.hu_cart{
+    display: flex;
+    align-items: center;
 }

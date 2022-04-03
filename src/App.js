@@ -19,6 +19,8 @@ import Admin from './Admin';
 import Men from './Men';
 import HeaderUpdated from './HeaderUpdated';
 import ProductDetailed from './ProductDetailed';
+import Checkout from './Checkout';
+import PlaceOrder from './PlaceOrder';
 function App() {
   const [{},dispatch] = useStateValue();
   useEffect(() => {
@@ -44,6 +46,14 @@ function App() {
     <Router>
     <div className="app">
       <Switch>
+        <Route path='/place-order'>
+        <HeaderUpdated />
+          <PlaceOrder />
+        </Route>
+        <Route path='/checkout'>
+        <HeaderUpdated />
+        <Checkout />
+        </Route>
         <Route path='/product-details'>
         <HeaderUpdated />
           <ProductDetailed />
@@ -62,8 +72,8 @@ function App() {
       <Brands />
       <Sections />
       </Route>
-      <Route path="/cart">
-      <Header />
+      <Route path="/mycart">
+      <HeaderUpdated />
         <Cart />
           </Route>
       <Route path="/user-register">

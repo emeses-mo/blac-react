@@ -97,3 +97,7 @@ font-weight: 500;
 .product_desc{
     margin-top: 5%;
 }
+.nodec{
+    text-decoration: none;
+    color: black;
+}

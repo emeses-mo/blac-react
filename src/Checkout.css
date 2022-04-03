@@ -1,0 +1,46 @@
+.checkout_main{
+    padding: 2% 4%;
+    font-family: 'Roboto',sans-serif;
+}
+.dl_fitem p{
+    font-size: 14px;
+    margin: 0;
+}
+.dl_fitem input{
+    padding: 0.5%;
+    border: 0.5px solid #c9c6ce;
+    font-size: 13px;
+    width: 30%;
+    border-radius: 7px;
+    margin: 0.5% 0;
+    outline: none;
+}   
+.dl_fitem textarea{
+    width: 400px;
+    outline: none;
+    border:0.5px solid #c9c6ce ;
+    border-radius: 7px;
+    resize: none;
+    padding: 1%;
+}
+.dl_next{
+  
+    width: 31%;
+}
+.dl_next button{
+    width: 30%;
+    color: white;
+    font-size:16px ;
+    border: none;
+    background-color: black;
+    padding: 1%;
+    border-radius: 4px;
+font-weight: 550;
+float: right;
+}
+.dl_next button:hover{
+    color: black;
+    background-color: white;
+    border: 1.5px solid black;
+    cursor: pointer;
+}

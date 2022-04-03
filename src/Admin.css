@@ -24,6 +24,7 @@
     
     width: 22vw;
 }
+
 .form input{
     width: 100%;
     outline: none;
@@ -33,6 +34,13 @@
     font-family: 'Roboto',sans-serif;
     font-weight: 540;
     margin:2% 0;
+}
+.form  textarea{
+    resize: none;
+    width: 400px;
+    outline: none;
+    padding: 2%;
+    border-radius: 8px;
 }
 .form select{
     width: 50%;
