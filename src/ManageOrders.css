@@ -1,0 +1,55 @@
+.order_img img{
+    width: 7vw;
+}
+.neworder{
+    border: 1px solid gray;
+    width: 30vw;
+    padding: 2%;
+    border-radius: 8px;
+    margin: 1%;
+
+}
+.order_info{
+    display: flex;
+    justify-content: space-between;
+}
+.mo_orders{
+    overflow-y: auto;
+    height: 75vh;
+    display:  flex;
+    flex-wrap: wrap;
+}
+.set_status{
+    float: right;
+}
+.set_status button{
+    width: 7vw;
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    font-weight: 550;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5%;
+}
+.set_status button:hover{
+    cursor: pointer;
+}
+.mo_main h3{
+    margin-left: 1%;
+}
+.cart_header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+.cart_header h4{
+    background-color: black;
+    color: white;
+  
+}
+.orderStatus button{
+
+display: flex;
+}

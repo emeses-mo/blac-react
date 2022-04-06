@@ -36,3 +36,6 @@
     display: flex;
     align-items: center;
 }
+.hu_cart  h5:hover{
+    cursor: pointer;
+}

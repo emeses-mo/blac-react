@@ -3,6 +3,9 @@ import './Admin.css'
 import { v4 as uuidv4 } from "uuid";
 import { Link ,useHistory} from 'react-router-dom'
 import { storage,db,auth } from './Firebase';
+import AddProducts from './AddProducts';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
+import ManageOrders from './ManageOrders';
 function Admin() {
     const history = useHistory()
     const [image,setImage]=useState(null)
@@ -72,45 +75,31 @@ console.log("url",url)
     <div className='admin_main'>
       <div className="admin_nav">
         <div className="nav_items">
-          <h2>Home</h2>
+        <Link className='dec' to='/'> <h2>Home</h2></Link> 
         </div>
         <div className="nav_items">
-           <h2>Add Products</h2>
+        <Link className='dec' to='/admin/add-products'><h2>Add Products</h2></Link>   
         </div>
        <div className="nav_items">
-          <h2>Manage Sellers</h2>
+       <Link className='dec' to='/admin/manage-orders'><h2>Manage Orders</h2></Link>   
        </div>
        
       </div>
         <div className="admin_form">
+          <Switch>
+            <Route path='/admin/add-products'>
+              <div className="form">
+                 <AddProducts />
+              </div>
+             
+            </Route>
+            <Route>
+              <ManageOrders />
+            </Route>
+          </Switch>
           <div className="form">
-          <form action="">
-
-<label htmlFor="">Product Name</label> <br />
-<input type="text" value={product} onChange={e=>setProduct(e.target.value)}/> <br />
-<label htmlFor="">Price</label>
-<input type="number" value={price} onChange={e=>setPrice(e.target.value)}/>
-<label htmlFor="">Section</label> <br />
-<select name="" id=""  value={section} onChange={e=>setSection(e.target.value)}>
-    <option value="" disabled selected>Select Section</option>
-    <option value="Mens">Mens</option>
-    <option value="Womens">Womens</option>
-    <option value="Kids">Kids</option>
-</select>
-<br />
-<label htmlFor="">Image</label>
-<input type="file" accept="image/png, image/jpeg"   onChange={handleImage} />
-<br />
-<textarea maxLength='250' name="" id="" cols="30" rows="10" value={desc} onChange={e=>setDesc(e.target.value)}></textarea>
-<div className="product_button">
-  <button onClick={handleUpload}>
-    
-    Add Item
-</button>
-</div>
-
-
-</form>
+            
+         
           </div>
      
 

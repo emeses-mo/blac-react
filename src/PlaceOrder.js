@@ -5,7 +5,11 @@ import { db } from './Firebase';
 import { useStateValue } from './StateProvider';
 import CurrencyFormat from "react-currency-format"
 import { getBasketTotal } from './reducer';
+import { v4 as uuidv4 } from "uuid";
+import {useHistory} from 'react-router-dom'
 function PlaceOrder() {
+    const history= useHistory()
+    const [disable,setDisable]=useState(false)
     const [{basket, user}, dispatch] = useStateValue();
     const [addy,setAddy]=useState([])
     useEffect(()=>{
@@ -18,6 +22,20 @@ function PlaceOrder() {
         })
     },[])
     console.log("Address",addy)
+    const placeOrder =(e)=>{
+        e.preventDefault()
+        const orderid = uuidv4()
+        db.collection('Orders').doc(orderid).set({
+            OrderID:orderid,
+            Fulfilled:'No',
+            Items: basket,
+            CustomerEmail:user.email,
+
+        })
+        console.log("Placed")
+        history.push('/customer-dash')
+        basket.length =0
+    }
   return (
     <div className='po_main'>
         
@@ -71,7 +89,9 @@ function PlaceOrder() {
                         }
                     </div>
                     <div className="po_placeorder">
-                        <button>Place Order</button>
+                      {
+                          basket.length == 0 ? <button disabled={true} onClick={placeOrder}>Place Order</button> :<button disabled={false} onClick={placeOrder}>Place Order</button>
+                      }  
                     </div>
 
         </div>

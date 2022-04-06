@@ -10,9 +10,15 @@ function Cart() {
     let value= getBasketTotal(basket)
   return (
     <div className='cart_main'>
+
            
             <div className="cart-items">
+              <div className="cart_header">
                 <h3>Your Cart</h3>
+                
+              </div>
+                
+
                 <div className="cwrapper">
                      {
                    basket.length==0 ? <h2>Cart is Empty!</h2> :basket.map(item=>(
@@ -32,6 +38,9 @@ function Cart() {
                
             </div>
             <div className="checkout_block">
+              <div className="orderStatus">
+             <Link to='/customer-dash'> <button>Order Status</button></Link>
+              </div>
            <div className="subtotal">
                <h3>SubTotal</h3>
                <CurrencyFormat 

@@ -1,0 +1,25 @@
+.cd_orders{
+   
+}
+.ord_img img{
+    width: 10vw;
+    border-radius: 8px;
+}
+.ordItems{
+    display: flex;
+    
+}
+.cd_main{
+    padding: 2%;
+}
+.orderbox{
+    border: 1px solid gray;
+    width: 40%;
+    border-radius: 12px;
+    margin: 2%;
+    padding: 1%;
+}
+.dec{
+    color: white;
+    text-decoration: none;
+}

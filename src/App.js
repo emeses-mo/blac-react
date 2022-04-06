@@ -21,8 +21,11 @@ import HeaderUpdated from './HeaderUpdated';
 import ProductDetailed from './ProductDetailed';
 import Checkout from './Checkout';
 import PlaceOrder from './PlaceOrder';
+import Test from './Test';
+import CustomerDash from './CustomerDash';
+import AdminLogin from './AdminLogin';
 function App() {
-  const [{},dispatch] = useStateValue();
+  const [{user},dispatch] = useStateValue();
   useEffect(() => {
     auth.onAuthStateChanged((authUser)=>{
       console.log("User is>" , authUser);
@@ -46,6 +49,13 @@ function App() {
     <Router>
     <div className="app">
       <Switch>
+        <Route path='/customer-dash'>
+        <HeaderUpdated />
+          <CustomerDash />
+        </Route>
+        <Route path='/test'>
+          <Test />
+        </Route>
         <Route path='/place-order'>
         <HeaderUpdated />
           <PlaceOrder />
@@ -63,7 +73,10 @@ function App() {
           <Men />
         </Route>
         <Route path='/admin'>
-          <Admin />
+          {
+            user? <Admin />: <AdminLogin />
+          }
+          
         </Route>
       <Route path="/test">
       <Header_new />
