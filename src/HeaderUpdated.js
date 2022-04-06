@@ -1,6 +1,7 @@
 import React from 'react'
 import cart from './images/sc.png'
 import './HeaderUpdated.css'
+import hlogo from './images/logofinal.png'
 import { auth } from './Firebase';
 import {Link} from 'react-router-dom'
 import { useHistory } from 'react-router-dom';
@@ -17,13 +18,13 @@ function HeaderUpdated() {
   return (
     <div className='hu_main'>
         <div className="hu_logo">
-
+       <Link to='/'> <img src={hlogo} alt="" /></Link>  
         </div>
         <div className="hu_nav">
             <div className="hunav_items">
            <Link className='nodec' to='/men'><p>Men</p></Link>    
-            <p>Women</p>
-            <p>Kids</p>
+          <Link className='nodec' to='/women'> <p>Women</p></Link> 
+         <Link className='nodec' to='/kids'><p>Kids</p></Link>   
             <p>Custom</p>
             </div>
            

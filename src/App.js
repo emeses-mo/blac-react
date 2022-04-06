@@ -24,6 +24,9 @@ import PlaceOrder from './PlaceOrder';
 import Test from './Test';
 import CustomerDash from './CustomerDash';
 import AdminLogin from './AdminLogin';
+import Women from './Women';
+import Kids from './Kids';
+import HomeNew from './HomeNew';
 function App() {
   const [{user},dispatch] = useStateValue();
   useEffect(() => {
@@ -49,12 +52,21 @@ function App() {
     <Router>
     <div className="app">
       <Switch>
+        <Route path='/kids'>
+        <HeaderUpdated />
+          <Kids />
+        </Route>
+        <Route path='/women'>
+        <HeaderUpdated />
+          <Women />
+        </Route>
         <Route path='/customer-dash'>
         <HeaderUpdated />
           <CustomerDash />
         </Route>
         <Route path='/test'>
-          <Test />
+        
+         <HomeNew />
         </Route>
         <Route path='/place-order'>
         <HeaderUpdated />

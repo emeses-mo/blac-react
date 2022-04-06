@@ -18,6 +18,7 @@ function Men() {
             setProducts(prod)
         })
     },[])
+    console.log("pr",products)
   return (
     <div className='men_main'>
             {/* {
@@ -42,7 +43,7 @@ function Men() {
             <div className="shop_items">
                 {
                     products.map((prod)=>(  
-                        <Link to='/product-details' onClick={()=>setPid(prod.ProductID)}>                        <ProductCardNew name={prod.ProductName} price={prod.Price} image={products.url} /></Link>
+                        <Link className='no-dec' to='/product-details' onClick={()=>setPid(prod.ProductID)}>                        <ProductCardNew name={prod.ProductName} price={prod.Price} image={prod.url} /></Link>
 
                     ))
                 }

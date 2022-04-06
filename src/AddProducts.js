@@ -42,7 +42,7 @@ function AddProducts() {
             
              setUrl('')
              
-             history.push('/')
+          alert.message("Product Added")
             })
           }
         )

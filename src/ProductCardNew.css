@@ -1,18 +1,26 @@
 .pc_img img{
-    width: 20vw;
-   object-fit: contain;
-   height: 35vh;
+   width: 18vw;
+  height: 35;
+
+  
 
 }
+.pc_img {
+  text-align: center;
+}
 .pc_main{
-    margin: 2%;
-    margin-top: 0;
+  
+  
+    margin: 1% 2% 5% 0;
+    width: 20vw;
 }
 .pc_info{
     margin-left: 10%;
 }
 .pc_info h3{
     margin: 0;
+    color: black;
+    
 }
 .pc_info p{
 margin: 0;
