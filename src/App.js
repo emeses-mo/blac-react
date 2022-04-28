@@ -27,6 +27,7 @@ import AdminLogin from './AdminLogin';
 import Women from './Women';
 import Kids from './Kids';
 import HomeNew from './HomeNew';
+import Custom from './Custom';
 function App() {
   const [{user},dispatch] = useStateValue();
   useEffect(() => {
@@ -52,8 +53,13 @@ function App() {
     <Router>
     <div className="app">
       <Switch>
-        <Route path='/kids'>
+        <Route path='/custom'>
         <HeaderUpdated />
+        <Custom />  
+        </Route>
+        <Route path='/kids'>
+
+        
           <Kids />
         </Route>
         <Route path='/women'>

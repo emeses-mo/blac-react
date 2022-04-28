@@ -25,7 +25,7 @@ function HeaderUpdated() {
            <Link className='nodec' to='/men'><p>Men</p></Link>    
           <Link className='nodec' to='/women'> <p>Women</p></Link> 
          <Link className='nodec' to='/kids'><p>Kids</p></Link>   
-            <p>Custom</p>
+         <Link className='nodec' to='/custom'> <p>Custom</p></Link>  
             </div>
            
         </div>
