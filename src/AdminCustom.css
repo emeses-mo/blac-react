@@ -1,0 +1,58 @@
+.c_img img {
+    width: 15vw;
+    height: 20vh;
+    border-radius: 5px;
+}
+.custom_card{
+    display: flex;
+    padding: 1%;
+    width: 31vw;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+.c_content{
+    display: block;
+    padding: 1% 4%;
+}
+.custom_title{
+    font-size: 17px;
+    font-weight: 550;
+}
+.custom_quote{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.custom_quote input{
+    margin-left: 5%     ;
+    border-radius: 5px;
+    outline: none;
+    padding: 1%;
+    padding-left: 3%;
+    border: none;
+    background-color: rgb(218, 215, 213);
+}
+.custom_btn{
+    float: right;
+}
+.custom_btn button{
+    padding: 6% 0;
+    width: 7vw;
+    font-weight: 550;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.custom_btn button:hover{
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border: 0.5px solid black;
+}
+.custom_quote input{
+    color: rgb(218, 215, 213);
+}
+
+.custom_quote input:focus{
+    color:black;
+}

@@ -58,7 +58,7 @@ function App() {
         <Custom />  
         </Route>
         <Route path='/kids'>
-
+        <HeaderUpdated />
         
           <Kids />
         </Route>
@@ -72,7 +72,7 @@ function App() {
         </Route>
         <Route path='/test'>
         
-         <HomeNew />
+        <Test />
         </Route>
         <Route path='/place-order'>
         <HeaderUpdated />

@@ -23,33 +23,36 @@ function ManageOrders() {
     }
   return (
     <div className='mo_main'>
-        <h3>New Orders</h3>
-        <div className="mo_orders">
         {
-            myorders.map((orders)=>(
-                <div className="neworder">
-                    <h4>Order ID: {orders.OrderID}</h4>
-                    { 
-                    orders.Items.map((item)=>(
-                        <div className="order_itemsbox">
-                        <div className="order_car">
-                          <h5>Order Summary</h5>
-                            <div className="order_info">
-                               <p>{item.title}</p>
-                               <p> ₹{item.price}</p>
+            myorders.length == 0 ? <h3>No New Orders</h3>: <div> <h3>New Orders</h3> {
+                myorders.map((orders)=>(
+                    <div className="neworder">
+                        <h4>Order ID: {orders.OrderID}</h4>
+                        { 
+                        orders.Items.map((item)=>(
+                            <div className="order_itemsbox">
+                            <div className="order_car">
+                              <h5>Order Summary</h5>
+                                <div className="order_info">
+                                   <p>{item.title}</p>
+                                   <p> ₹{item.price}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-            ))
+                ))
+                            
+                        }
+                        <div className="set_status">
+                            <button onClick={()=>setStatus(orders.OrderID)}>Ship</button>
+                        </div>
                         
-                    }
-                    <div className="set_status">
-                        <button onClick={()=>setStatus(orders.OrderID)}>Ship</button>
                     </div>
-                    
-                </div>
-            ))
+                ))
+            }</div>
         }
+        
+        <div className="mo_orders">
+       
         </div>
     </div>
   )

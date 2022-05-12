@@ -11,6 +11,7 @@ function AddProducts() {
     const [price,setPrice]= useState('')
     const [url,setUrl]=useState('')
     const [desc,setDesc]= useState('')
+    const [subsec,setSubsec]= useState('')
 
     const handleUpload =(e)=>{
         e.preventDefault()
@@ -34,7 +35,7 @@ function AddProducts() {
                  url:url,
                  Section:section,
                  desc:desc,
-                
+                  subsection:subsec,
                })
                console.log("auth ",authUser)
              })
@@ -80,6 +81,18 @@ function AddProducts() {
     <option value="Mens">Mens</option>
     <option value="Womens">Womens</option>
     <option value="Kids">Kids</option>
+</select>
+<br />
+<label htmlFor="">SubSection</label> <br />
+<select name="" id=""  value={subsec} onChange={e=>setSubsec(e.target.value)}>
+    <option value="" disabled selected>Select SubSection</option>
+    <option value="Tops & Tshirts">Tops & Tshirts</option>
+    <option value="Hoodies & Sweatshirts">Hoodies & Sweatshirts</option>
+    <option value="Jackets & Gilets">Jackets & Gilets</option>
+    <option value="Trousers & Tights">Trousers & Tights</option>
+    <option value="Tracksuits">Tracksuits</option>
+    <option value="Shorts">Shorts</option>
+   
 </select>
 <br />
 <label htmlFor="">Image</label>

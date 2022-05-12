@@ -1,0 +1,22 @@
+.custom_placeholderimg img{
+    width: 20vw;
+}
+.custom_main{
+    padding: 2%;
+}
+.custom_upload{
+    display: flex;
+    
+    padding: 1%;
+ align-items: center;
+  
+}
+.custom_inputs p{
+    margin-bottom: 2%;
+}
+.custom_info{
+    padding: 1%;
+}
+.custom_inputs input{
+    margin-bottom: 5%;
+}

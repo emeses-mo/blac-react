@@ -1,5 +1,8 @@
 import React,{useEffect,useState} from 'react'
 import { storage,db,auth } from './Firebase';
+import {OBJModel} from 'react-3d-viewer'
+import { ObjViewer } from 'react-obj-viewer'
+import tshirt from "./images/3d/kicks.obj"
 function Test() {
 const [orders,setOrders]=useState([])
 useEffect(()=>{
@@ -14,19 +17,12 @@ useEffect(()=>{
 console.log("orders",orders)
   return (
     <div>
-            {
-                orders.map((o)=>(
-                    <div className="ords">
-                        <p>ID : {o.OrderID}</p>
-                        <p>Items</p>
-                        <p>{o.Items.map((item)=>(
-                            <div className="its">
-                                <h6>{item.title}</h6>
-                            </div>
-                        ))}</p>
-                    </div>
-                ))
-            }
+        <h1>h3l</h1>
+        <ObjViewer 
+        model={tshirt}
+        width={400}
+        height={400}
+    />
     </div>
   )
 }

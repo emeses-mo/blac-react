@@ -8,6 +8,7 @@ function Men() {
     const setPid =(pid)=>{
         localStorage.setItem("pid",JSON.stringify(pid))
     }
+    const [jng,setJng]=useState([])
     const [products,setProducts]= useState([])
     useEffect(()=>{
         db.collection('Mens').onSnapshot((querySnapshot)=>{
@@ -16,6 +17,13 @@ function Men() {
                 prod.push(doc.data())
             })
             setProducts(prod)
+        })
+        db.collection('Mens').where("subsection","==","Jackets & Gilets").onSnapshot((querySnapshot)=>{
+            const prod=[]
+            querySnapshot.forEach((doc)=>{
+                prod.push(doc.data())
+            })
+            setJng(prod)
         })
     },[])
     console.log("pr",products)
@@ -43,7 +51,8 @@ function Men() {
             <div className="shop_items">
                 {
                     products.map((prod)=>(  
-                        <Link className='no-dec' to='/product-details' onClick={()=>setPid(prod.ProductID)}>                        <ProductCardNew name={prod.ProductName} price={prod.Price} image={prod.url} /></Link>
+                        <Link className='no-dec' to='/product-details' onClick={()=>setPid(prod.ProductID)}>                        
+                        <ProductCardNew name={prod.ProductName} price={prod.Price} image={prod.url} /></Link>
 
                     ))
                 }
@@ -51,6 +60,18 @@ function Men() {
                
 
             </div>
+            {/* {
+                jng.length == 0 ? console.log() : <div className="shop_items">
+
+{
+                    jng.map((prod)=>(  
+                        <Link className='no-dec' to='/product-details' onClick={()=>setPid(prod.ProductID)}>                        
+                        <ProductCardNew name={prod.ProductName} price={prod.Price} image={prod.url} /></Link>
+
+                    ))
+                }
+                </div>
+            } */}
     </div>
   )
 }

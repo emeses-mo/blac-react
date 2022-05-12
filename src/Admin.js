@@ -6,6 +6,9 @@ import { storage,db,auth } from './Firebase';
 import AddProducts from './AddProducts';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import ManageOrders from './ManageOrders';
+import Custom from './Custom';
+import AdminCustom from './AdminCustom';
+import RemoveProducts from './RemoveProducts';
 function Admin() {
     const history = useHistory()
     const [image,setImage]=useState(null)
@@ -80,8 +83,14 @@ console.log("url",url)
         <div className="nav_items">
         <Link className='dec' to='/admin/add-products'><h2>Add Products</h2></Link>   
         </div>
+        <div className="nav_items">
+        <Link className='dec' to='/admin/remove-products'><h2>Remove Products</h2></Link>   
+        </div>
        <div className="nav_items">
        <Link className='dec' to='/admin/manage-orders'><h2>Manage Orders</h2></Link>   
+       </div>
+       <div className="nav_items">
+       <Link className='dec' to='/admin/custom-orders'><h2>Custom Orders</h2></Link>   
        </div>
        
       </div>
@@ -93,8 +102,16 @@ console.log("url",url)
               </div>
              
             </Route>
-            <Route>
+            <Route path='/admin/remove-products'>
+              <div className="form">
+                <RemoveProducts />
+              </div>
+            </Route>
+            <Route path='/admin/manage-orders'>
               <ManageOrders />
+            </Route>
+            <Route path='/admin/custom-orders'>
+              <AdminCustom />
             </Route>
           </Switch>
           <div className="form">
