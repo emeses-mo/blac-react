@@ -44,3 +44,11 @@
 .hu_cart  h5:hover{
     cursor: pointer;
 }
+.hu_cart h5{
+    background-color: black;
+    padding: 7% 12%;
+    color: white;
+    font-size: 15px;
+    margin-left: 10%;
+    border-radius: 22px;
+}
